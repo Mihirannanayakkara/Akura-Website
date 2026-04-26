@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { RevealOnScroll } from './useScrollReveal';
+import myImage from './assets/hero-bg.png';
 
 function TypeWriter({ texts, speed = 80, deleteSpeed = 40, pause = 2000 }) {
   const [displayText, setDisplayText] = useState('');
@@ -75,7 +76,7 @@ export default function Hero() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 border border-primary/20 mb-6">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-sm text-primary-dark font-semibold">
-                  Research Project 2024/25
+                  Research Project 2025/26
                 </span>
               </div>
             </RevealOnScroll>
@@ -140,11 +141,8 @@ export default function Hero() {
           <RevealOnScroll animation="animate-slide-left" className="relative">
             <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-10" />
-              <img
-                src="/images/hero-bg.png"
-                alt="Children learning Sinhala letters, numbers and preschool activities with Akura app"
-                className="w-full h-[300px] sm:h-[400px] lg:h-[520px] object-cover object-center"
-              />
+              <img src={myImage} alt="Children learning Sinhala letters, numbers and preschool activities with Akura app"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[520px] object-cover object-center" />
             </div>
           </RevealOnScroll>
         </div>

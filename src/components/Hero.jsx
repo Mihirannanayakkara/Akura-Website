@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { RevealOnScroll } from './useScrollReveal';
-import myImage from './assets/hero-bg.png';
+import myImage from '../assets/hero-bg.png';
 
 function TypeWriter({ texts, speed = 80, deleteSpeed = 40, pause = 2000 }) {
   const [displayText, setDisplayText] = useState('');

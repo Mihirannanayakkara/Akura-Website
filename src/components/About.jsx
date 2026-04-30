@@ -6,6 +6,7 @@ import mihiranImage from '../assets/team/mihiran.jpg';
 import dinithiImage from '../assets/team/dinithi.jpg';
 import dhuwindhuImage from '../assets/team/du.jpg';
 import rahulImage from '../assets/team/rahul.jpg';
+import jennyImage from '../assets/team/jenny.png';
 
 const supervisors = [
   {
@@ -23,11 +24,11 @@ const supervisors = [
     name: 'Ms. Jenny Krishara',
     role: 'Co-Supervisor',
     avatar: 'JK',
-    image: null,
+    image: jennyImage,
     color: 'from-pink-400 to-rose-500',
     institution: 'Sri Lanka Institute of Information Technology (SLIIT)',
     department: 'Department of Information Technology',
-    email: 'mihiran@example.com',
+    email: 'jenny.k@sliit.lk',
     linkedin: 'https://www.linkedin.com/in/jenny-krishara-1a09a0111/',
   },
 ];

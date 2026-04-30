@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
           <div className="text-center">
             <p className="text-text-secondary text-sm font-medium">Sri Lanka Institute of Information Technology</p>
-            <p className="text-text-muted text-xs mt-1">Faculty of Computing — 2024/25</p>
+            <p className="text-text-muted text-xs mt-1">Faculty of Computing — 2025/26</p>
           </div>
           <div className="sm:text-right">
             <p className="text-text-secondary text-sm">© {new Date().getFullYear()} Team Akura</p>

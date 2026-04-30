@@ -4,12 +4,13 @@ import { RevealOnScroll } from './useScrollReveal';
 const milestones = [
   { date: 'Sep 2025', title: 'Project Proposal', desc: 'A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.', marks: 12, status: 'completed' },
   { date: 'Jan 2026', title: 'Progress Presentation I', desc: 'Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.', marks: 15, status: 'completed' },
+  { date: 'Jan 2026', title: 'Checklist 1', desc: 'Checklist 1 Github Repository', marks: 1, status: 'completed' },
   { date: 'March 2026', title: 'Progress Presentation II', desc: 'Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.', marks: 18, status: 'completed' },
   { date: 'May 2026', title: 'Research Paper', desc: 'Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge.', marks: 10, status: 'completed' },
-  { date: 'May 2026', title: 'Final Report', desc: 'Final Report evaluates the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also final report.', marks: 19, status: 'in-progress' },
+  { date: 'April 2026', title: 'Website Assessment', desc: 'The Website helps to promote our research project and reveals all details related to the project.', marks: 2, status: 'in-progress' },
+  { date: 'April 2026', title: 'Checklist 2', desc: 'Checklist 2 MS Planner Report', marks: 1, status: 'in-progress' },
   { date: 'May 2026', title: 'Final Presentation & Viva', desc: 'Viva is held individually to assess each member\'s contribution to the project.', marks: 20, status: 'upcoming' },
-  { date: 'April 2026', title: 'Website Assessment', desc: 'The Website helps to promote our research project and reveals all details related to the project.', marks: 2, status: 'upcoming' },
-  { date: 'April 2026', title: 'Checklist', desc: 'Checklist for Status documents 1 & 2.', marks: 2, status: 'upcoming' },
+  { date: 'May 2026', title: 'Final Report', desc: 'Final Report evaluates the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also final report.', marks: 19, status: 'in-progress' },
   { date: 'April 2026', title: 'Logbook', desc: 'Status of the project is validated through the Logbook.', marks: 2, status: 'upcoming' },
 ];
 

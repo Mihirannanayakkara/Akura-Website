@@ -14,7 +14,6 @@ const galleryItems = [
 
   // Demo Videos
   { id: 7, type: 'video', category: 'demo', src: '', caption: 'Akura App Demo Video', placeholder: true },
-  { id: 8, type: 'video', category: 'demo', src: '', caption: 'Gesture Recognition Demo', placeholder: true },
 
   // App Screenshots
   { id: 9, type: 'image', category: 'app', src: '', caption: 'Home Screen', placeholder: true },
@@ -126,7 +125,7 @@ export default function Gallery() {
         />
 
         {/* Filter tabs */}
-        <RevealOnScroll className="mb-12">
+        <RevealOnScroll className="mb-8">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
               <button
@@ -161,19 +160,6 @@ export default function Gallery() {
             </RevealOnScroll>
           ))}
         </div>
-
-        {/* Add more prompt */}
-        <RevealOnScroll className="mt-12">
-          <div className="text-center py-8 border-2 border-dashed border-border rounded-2xl bg-white/50">
-            <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-            <p className="text-text-secondary font-medium">More content coming soon</p>
-            <p className="text-text-muted text-sm mt-1">User testing images and demo videos will be added here</p>
-          </div>
-        </RevealOnScroll>
       </div>
     </section>
   );

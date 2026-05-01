@@ -59,7 +59,7 @@ export default function Documents() {
             const config = typeConfig[doc.type];
             return (
               <RevealOnScroll key={i} delay={`${i * 80}ms`}>
-                <div className="group bg-white rounded-2xl p-6 border border-border shadow-card card-hover h-full flex flex-col items-center text-center">
+                <div className="group bg-surface-card rounded-2xl p-6 border border-border shadow-card card-hover h-full flex flex-col items-center text-center">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${config.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-5`}>
                     {config.icon}
                   </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -55,7 +56,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'glass-strong shadow-lg shadow-black/5'
-          : 'bg-white/60 backdrop-blur-md'
+          : 'bg-white/60 dark:bg-slate-900/60 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,31 +92,35 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            id="mobile-menu-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-primary-50 transition-colors"
-            aria-label="Toggle menu"
-          >
-            <div className="flex flex-col gap-1.5">
-              <span
-                className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 origin-center ${
-                  mobileOpen ? 'rotate-45 translate-y-[4px]' : ''
-                }`}
-              />
-              <span
-                className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 ${
-                  mobileOpen ? 'opacity-0 scale-0' : ''
-                }`}
-              />
-              <span
-                className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 origin-center ${
-                  mobileOpen ? '-rotate-45 -translate-y-[4px]' : ''
-                }`}
-              />
-            </div>
-          </button>
+          {/* Right: Theme Toggle + Mobile toggle */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+
+            <button
+              id="mobile-menu-toggle"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-primary-50 dark:hover:bg-primary-50/10 transition-colors"
+              aria-label="Toggle menu"
+            >
+              <div className="flex flex-col gap-1.5">
+                <span
+                  className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 origin-center ${
+                    mobileOpen ? 'rotate-45 translate-y-[4px]' : ''
+                  }`}
+                />
+                <span
+                  className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 ${
+                    mobileOpen ? 'opacity-0 scale-0' : ''
+                  }`}
+                />
+                <span
+                  className={`block w-5 h-0.5 bg-text-primary rounded-full transition-all duration-300 origin-center ${
+                    mobileOpen ? '-rotate-45 -translate-y-[4px]' : ''
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 

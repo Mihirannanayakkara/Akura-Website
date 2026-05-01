@@ -6,7 +6,7 @@ const technologies = [
     name: 'Flutter',
     desc: 'Cross-platform framework for the mobile application and processing path objects.',
     color: 'from-sky-400 to-blue-600',
-    bg: 'bg-sky-50',
+    bg: 'bg-sky-50 dark:bg-sky-950/40',
     icon: (
       <svg viewBox="0 0 24 24" className="w-10 h-10" fill="currentColor">
         <path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.357zm0 11.066L7.93 17.48l4.244 4.242h7.37l-5.23-5.23-5.227 5.23" style={{color: '#02569B'}} />
@@ -32,7 +32,7 @@ const technologies = [
     name: 'Android',
     desc: 'Native OS targeted for low latency and real-time on-device processing.',
     color: 'from-green-400 to-green-600',
-    bg: 'bg-green-50',
+    bg: 'bg-green-50 dark:bg-green-950/40',
     svgIcon: (
       <svg viewBox="0 0 256 301" className="w-10 h-10">
         <path d="M174.875 35.462l16.97-29.393a3.624 3.624 0 00-6.275-3.624L168.37 31.998c-12.2-5.565-25.93-8.674-40.37-8.674-14.44 0-28.17 3.109-40.37 8.674L70.43 2.445a3.624 3.624 0 00-6.275 3.624l16.97 29.393C37.76 58.238 8.342 100.476 0 150.462h256c-8.342-50.086-37.76-92.224-81.125-114.9zM70 113.124a14 14 0 110-28 14 14 0 010 28zm116 0a14 14 0 110-28 14 14 0 010 28z" fill="#3DDC84" />
@@ -44,7 +44,7 @@ const technologies = [
     name: 'MediaPipe',
     desc: 'Real-time, on-device hand landmark detection for gesture recognition.',
     color: 'from-blue-500 to-indigo-600',
-    bg: 'bg-blue-50',
+    bg: 'bg-blue-50 dark:bg-blue-950/40',
     svgIcon: (
       <svg viewBox="0 0 48 48" className="w-10 h-10">
         <circle cx="24" cy="24" r="20" fill="#0097A7" />
@@ -63,7 +63,7 @@ const technologies = [
     name: 'TensorFlow Lite',
     desc: 'Quantizing and running lightweight ML models directly on mobile devices.',
     color: 'from-orange-400 to-orange-600',
-    bg: 'bg-orange-50',
+    bg: 'bg-orange-50 dark:bg-orange-950/40',
     svgIcon: (
       <svg viewBox="0 0 256 274" className="w-10 h-10">
         <path d="M145.726 0l109.16 63.239v126.476L191.652 221.4v-63.235l63.236-31.618V63.239L145.726 0z" fill="#FF6F00" />
@@ -78,7 +78,7 @@ const technologies = [
     name: 'MobileNetV2',
     desc: 'Neural network backbone for the emotion-aware personalization module.',
     color: 'from-purple-400 to-violet-600',
-    bg: 'bg-purple-50',
+    bg: 'bg-purple-50 dark:bg-purple-950/40',
     svgIcon: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none">
         <rect x="4" y="12" width="8" height="8" rx="2" fill="#7C3AED" />
@@ -107,7 +107,7 @@ const technologies = [
     name: 'Wav2Vec 2.0',
     desc: 'Speech recognition architecture fine-tuned for Sinhala pronunciation assessment.',
     color: 'from-teal-400 to-cyan-600',
-    bg: 'bg-teal-50',
+    bg: 'bg-teal-50 dark:bg-teal-950/40',
     svgIcon: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none">
         <rect x="2" y="18" width="4" height="12" rx="2" fill="#0D9488" />
@@ -125,7 +125,7 @@ const technologies = [
     name: 'BC-ResNet-4',
     desc: 'Lightweight model for speech classification on resource-constrained devices.',
     color: 'from-rose-400 to-red-600',
-    bg: 'bg-rose-50',
+    bg: 'bg-rose-50 dark:bg-rose-950/40',
     svgIcon: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none">
         <rect x="8" y="8" width="32" height="32" rx="6" fill="#F43F5E" opacity=".1" stroke="#F43F5E" strokeWidth="1.5" />
@@ -157,7 +157,7 @@ export default function Technologies() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
           {technologies.map((tech, i) => (
             <RevealOnScroll key={i} delay={`${i * 80}ms`}>
-              <div className="group bg-white rounded-2xl p-5 border border-border shadow-card card-hover h-full flex flex-col items-center text-center">
+              <div className="group bg-surface-card rounded-2xl p-5 border border-border shadow-card card-hover h-full flex flex-col items-center text-center">
                 {/* Icon */}
                 <div className={`w-20 h-20 rounded-2xl ${tech.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   {tech.svgIcon}

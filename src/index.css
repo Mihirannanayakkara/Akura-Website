@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* ===== WARM EDUCATION COLOR PALETTE ===== */
   /* Primary: Trustworthy teal-blue for education */
@@ -57,6 +59,27 @@
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
   --animate-gradient: gradient 8s ease infinite;
   --animate-bounce-soft: bounce-soft 2s ease-in-out infinite;
+}
+
+/* ===== DARK MODE TOKEN OVERRIDES ===== */
+.dark {
+  --color-primary-50: #0c2d48;
+  --color-primary-100: #0e3a5c;
+
+  --color-accent-50: #2a1015;
+
+  --color-surface: #0F172A;
+  --color-surface-alt: #1E293B;
+  --color-surface-warm: #1A1520;
+  --color-surface-card: #1E293B;
+  --color-surface-elevated: #334155;
+
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #64748B;
+
+  --color-border: #334155;
+  --color-border-light: #1E293B;
 }
 
 @keyframes fade-in {
@@ -123,6 +146,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Smooth theme transition */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -151,12 +182,23 @@ body {
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+.dark .glass {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
 .glass-strong {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(226, 232, 240, 0.9);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-strong {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Gradient text */
@@ -200,6 +242,11 @@ body {
               0 8px 25px -8px rgba(0, 0, 0, 0.08);
 }
 
+.dark .card-hover:hover {
+  box-shadow: 0 20px 60px -15px rgba(14, 165, 233, 0.25),
+              0 8px 25px -8px rgba(0, 0, 0, 0.4);
+}
+
 /* Section divider */
 .section-divider {
   height: 1px;
@@ -221,9 +268,19 @@ body {
               0 6px 24px rgba(0, 0, 0, 0.06);
 }
 
+.dark .shadow-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2),
+              0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
 .shadow-card-lg {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04),
               0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dark .shadow-card-lg {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3),
+              0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Decorative blob */

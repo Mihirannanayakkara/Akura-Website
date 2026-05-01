@@ -34,7 +34,7 @@ export default function Contact() {
               </div>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
-                  <a key={i} href={item.href} className="group flex items-center gap-4 bg-white rounded-2xl p-4 border border-border shadow-card card-hover">
+                  <a key={i} href={item.href} className="group flex items-center gap-4 bg-surface-card rounded-2xl p-4 border border-border shadow-card card-hover">
                     <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center text-2xl group-hover:bg-primary-100 transition-colors">{item.icon}</div>
                     <div>
                       <div className="text-xs text-text-muted uppercase tracking-wider font-semibold">{item.label}</div>
@@ -48,7 +48,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <RevealOnScroll className="lg:col-span-3" animation="animate-slide-left">
-            <form id="contact-form" onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 border border-border shadow-card-lg">
+            <form id="contact-form" onSubmit={handleSubmit} className="bg-surface-card rounded-3xl p-8 border border-border shadow-card-lg">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-semibold text-text-primary mb-2">Full Name</label>

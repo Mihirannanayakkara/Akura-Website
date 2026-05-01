@@ -39,7 +39,7 @@ function TypeWriter({ texts, speed = 80, deleteSpeed = 40, pause = 2000 }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-primary-50 via-white to-white">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-primary-50 via-surface to-surface">
       {/* Decorative background shapes */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large teal blob top-right */}
@@ -75,7 +75,7 @@ export default function Hero() {
             <RevealOnScroll>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 border border-primary/20 mb-6">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-sm text-primary-dark font-semibold">
+                <span className="text-sm text-primary-dark dark:text-primary-light font-semibold">
                   Research Project 2025/26
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function Hero() {
               { value: '85%', label: 'Literacy Gap', color: 'bg-module-gesture/10 text-module-gesture' },
               { value: 'On-Device', label: 'Processing', color: 'bg-module-pronunciation/10 text-module-pronunciation' },
             ].map((stat, i) => (
-              <div key={i} className="bg-white rounded-2xl p-4 shadow-card card-hover text-center border border-border-light">
+              <div key={i} className="bg-surface-card rounded-2xl p-4 shadow-card card-hover text-center border border-border-light">
                 <div className={`text-2xl font-bold font-display ${stat.color.split(' ')[1]}`}>{stat.value}</div>
                 <div className="text-xs text-text-muted mt-1 uppercase tracking-wider font-semibold">{stat.label}</div>
               </div>

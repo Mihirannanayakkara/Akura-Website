@@ -1,3 +1,4 @@
+import ThemeProvider from './components/ThemeProvider'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Domain from './components/Domain'
@@ -12,19 +13,21 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <Domain />
-      <Technologies />
-      <Milestones />
-      <Documents />
-      <Achievements />
-      <Gallery />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-surface">
+        <Navbar />
+        <Hero />
+        <Domain />
+        <Technologies />
+        <Milestones />
+        <Documents />
+        <Achievements />
+        <Gallery />
+        <About />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 

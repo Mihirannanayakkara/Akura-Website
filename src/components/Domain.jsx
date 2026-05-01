@@ -54,7 +54,7 @@ const researchGaps = [
       </svg>
     ),
     title: 'Static Content Only',
-    desc: 'Existing Sinhala learning applications mainly provide fixed lessons, images, sounds, and simple quizzes. They do not adapt to the child’s performance or provide meaningful guidance during the learning process, making the experience less interactive and less personalized.',
+    desc: "Existing Sinhala learning applications mainly provide fixed lessons, images, sounds, and simple quizzes. They do not adapt to the child's performance or provide meaningful guidance during the learning process, making the experience less interactive and less personalized.",
     color: 'bg-accent/10 text-accent',
   },
   {
@@ -74,7 +74,7 @@ const researchGaps = [
       </svg>
     ),
     title: 'No Emotion Adaptation',
-    desc: 'Most learning platforms ignore the child’s emotional state during activities. They provide the same content and difficulty level even when a child is frustrated, sad, confused, or disengaged, which can reduce motivation and learning effectiveness.',
+    desc: "Most learning platforms ignore the child's emotional state during activities. They provide the same content and difficulty level even when a child is frustrated, sad, confused, or disengaged, which can reduce motivation and learning effectiveness.",
     color: 'bg-pink-500/10 text-pink-500',
   },
   {
@@ -93,7 +93,7 @@ const modules = [
   {
     icon: '✍️',
     color: 'from-sky-400 to-blue-600',
-    bgLight: 'bg-sky-50',
+    bgLight: 'bg-sky-50 dark:bg-sky-950/40',
     title: 'Handwriting Validation',
     tech: 'Vector-based Path Sampling',
     desc: 'Real-time stroke-order tutoring and character validation for Sinhala letters using efficient vector-based path sampling algorithms optimized for mobile.',
@@ -101,7 +101,7 @@ const modules = [
   {
     icon: '😊',
     color: 'from-pink-400 to-rose-600',
-    bgLight: 'bg-rose-50',
+    bgLight: 'bg-rose-50 dark:bg-rose-950/40',
     title: 'Emotion-Aware Personalization',
     tech: 'MobileNetV2',
     desc: 'Detects child emotions through facial expressions and dynamically adjusts difficulty, pacing, and encouragement for optimal engagement.',
@@ -109,7 +109,7 @@ const modules = [
   {
     icon: '🤟',
     color: 'from-amber-400 to-orange-600',
-    bgLight: 'bg-amber-50',
+    bgLight: 'bg-amber-50 dark:bg-amber-950/40',
     title: 'Gesture-Based Adaptive Numeracy',
     tech: 'MediaPipe',
     desc: 'Hand gesture recognition enables intuitive, touchless numeracy learning through interactive counting and number formation exercises.',
@@ -117,7 +117,7 @@ const modules = [
   {
     icon: '🗣️',
     color: 'from-emerald-400 to-green-600',
-    bgLight: 'bg-emerald-50',
+    bgLight: 'bg-emerald-50 dark:bg-emerald-950/40',
     title: 'Sinhala Pronunciation Assessment',
     tech: 'Wav2Vec 2.0 & BC-ResNet-4',
     desc: 'Fine-tuned speech models assess Sinhala pronunciation accuracy with phoneme-level feedback for corrective guidance.',
@@ -137,7 +137,7 @@ export default function Domain() {
         {/* Literature Survey */}
         {/* Literature Survey */}
 <RevealOnScroll className="mb-20">
-  <div className="relative overflow-hidden rounded-3xl bg-white border border-border shadow-card-lg">
+  <div className="relative overflow-hidden rounded-3xl bg-surface-card border border-border shadow-card-lg">
     <div className="absolute top-0 left-0 right-0 h-1 gradient-bg-warm" />
     <div className="absolute -top-24 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-[80px]" />
     <div className="absolute -bottom-24 -left-20 w-72 h-72 bg-accent/5 rounded-full blur-[80px]" />
@@ -218,7 +218,7 @@ export default function Domain() {
           <div className="grid sm:grid-cols-2 gap-6">
             {researchGaps.map((gap, i) => (
               <RevealOnScroll key={i} delay={`${i * 100}ms`}>
-                <div className="group bg-white rounded-2xl p-6 border border-border shadow-card card-hover h-full">
+                <div className="group bg-surface-card rounded-2xl p-6 border border-border shadow-card card-hover h-full">
                   <div className={`w-12 h-12 rounded-xl ${gap.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     {gap.icon}
                   </div>
@@ -249,7 +249,7 @@ export default function Domain() {
 
   {/* Main Objective */}
   <RevealOnScroll className="mb-12">
-    <div className="relative overflow-hidden rounded-3xl bg-white border border-border shadow-card-lg p-8 sm:p-10">
+    <div className="relative overflow-hidden rounded-3xl bg-surface-card border border-border shadow-card-lg p-8 sm:p-10">
       <div className="absolute top-0 left-0 right-0 h-1 gradient-bg-warm" />
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px]" />
       <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-[80px]" />
@@ -304,7 +304,7 @@ export default function Domain() {
   <div className="grid sm:grid-cols-2 gap-6">
     {modules.map((mod, i) => (
       <RevealOnScroll key={i} delay={`${i * 120}ms`}>
-        <div className="group relative bg-white rounded-2xl p-6 border border-border shadow-card card-hover overflow-hidden h-full">
+        <div className="group relative bg-surface-card rounded-2xl p-6 border border-border shadow-card card-hover overflow-hidden h-full">
           <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${mod.color}`} />
 
           <div className="relative">

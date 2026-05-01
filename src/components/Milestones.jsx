@@ -8,7 +8,7 @@ const milestones = [
   { date: 'March 2026', title: 'Progress Presentation II', desc: 'Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.', marks: 18, status: 'completed' },
   { date: 'May 2026', title: 'Research Paper', desc: 'Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge.', marks: 10, status: 'completed' },
   { date: 'April 2026', title: 'Website Assessment', desc: 'The Website helps to promote our research project and reveals all details related to the project.', marks: 2, status: 'in-progress' },
-  { date: 'April 2026', title: 'Checklist 2', desc: 'Checklist 2 MS Planner Report', marks: 1, status: 'in-progress' },
+  { date: 'April 2026', title: 'Checklist 2', desc: 'Checklist 2 MS Planner Report', marks: 1, status: 'completed' },
   { date: 'May 2026', title: 'Final Presentation & Viva', desc: 'Viva is held individually to assess each member\'s contribution to the project.', marks: 20, status: 'upcoming' },
   { date: 'May 2026', title: 'Final Report', desc: 'Final Report evaluates the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also final report.', marks: 19, status: 'in-progress' },
   { date: 'April 2026', title: 'Logbook', desc: 'Status of the project is validated through the Logbook.', marks: 2, status: 'upcoming' },
@@ -16,9 +16,9 @@ const milestones = [
 
 function StatusBadge({ status }) {
   const styles = {
-    completed: 'bg-green-50 text-green-600 border-green-200',
-    'in-progress': 'bg-amber-50 text-amber-600 border-amber-200',
-    upcoming: 'bg-gray-50 text-gray-500 border-gray-200',
+    completed: 'bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 border-green-200 dark:border-green-800',
+    'in-progress': 'bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-800',
+    upcoming: 'bg-gray-50 dark:bg-gray-800/40 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700',
   };
   const labels = { completed: 'Completed', 'in-progress': 'In Progress', upcoming: 'Upcoming' };
 
@@ -37,7 +37,6 @@ export default function Milestones() {
         <SectionHeading title="Our" highlight="Milestones" subtitle="Our journey through the academic evaluation process" />
 
         <div className="relative">
-          {/* Center line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent via-primary to-transparent hidden md:block" />
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent via-primary to-transparent md:hidden" />
 
@@ -48,14 +47,14 @@ export default function Milestones() {
                 <RevealOnScroll key={i} animation={isLeft ? 'animate-slide-right' : 'animate-slide-left'}>
                   <div className="relative flex items-start md:items-center">
                     <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
-                      <div className={`w-5 h-5 rounded-full border-4 bg-white ${
-                        m.status === 'completed' ? 'border-green-500 shadow-lg shadow-green-200'
-                        : m.status === 'in-progress' ? 'border-amber-500 shadow-lg shadow-amber-200 animate-pulse'
-                        : 'border-gray-300'
+                      <div className={`w-5 h-5 rounded-full border-4 bg-surface ${
+                        m.status === 'completed' ? 'border-green-500 shadow-lg shadow-green-200 dark:shadow-green-900'
+                        : m.status === 'in-progress' ? 'border-amber-500 shadow-lg shadow-amber-200 dark:shadow-amber-900 animate-pulse'
+                        : 'border-gray-300 dark:border-gray-600'
                       }`} />
                     </div>
                     <div className={`ml-14 md:ml-0 md:w-[calc(50%-2.5rem)] ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}>
-                      <div className="bg-white rounded-2xl p-6 border border-border shadow-card card-hover group">
+                      <div className="bg-surface-card rounded-2xl p-6 border border-border shadow-card card-hover group">
                         <div className="flex items-center justify-between flex-wrap gap-3 mb-3">
                           <span className="px-3 py-1 rounded-lg gradient-bg-warm text-white text-xs font-bold shadow-sm">{m.date}</span>
                           <StatusBadge status={m.status} />

@@ -2,20 +2,14 @@ import { useState } from 'react';
 import SectionHeading from './SectionHeading';
 import { RevealOnScroll } from './useScrollReveal';
 
-// Placeholder data — replace src values with actual image/video paths later
 const galleryItems = [
-  // User Testing Photos
   { id: 1, type: 'image', category: 'testing', src: '', caption: 'User testing session with preschool children', placeholder: true },
   { id: 2, type: 'image', category: 'testing', src: '', caption: 'Children interacting with gesture module', placeholder: true },
   { id: 3, type: 'image', category: 'testing', src: '', caption: 'Handwriting recognition testing', placeholder: true },
   { id: 4, type: 'image', category: 'testing', src: '', caption: 'Emotion detection module in action', placeholder: true },
   { id: 5, type: 'image', category: 'testing', src: '', caption: 'Pronunciation assessment testing', placeholder: true },
   { id: 6, type: 'image', category: 'testing', src: '', caption: 'Group testing at preschool', placeholder: true },
-
-  // Demo Videos
   { id: 7, type: 'video', category: 'demo', src: '', caption: 'Akura App Demo Video', placeholder: true },
-
-  // App Screenshots
   { id: 9, type: 'image', category: 'app', src: '', caption: 'Home Screen', placeholder: true },
   { id: 10, type: 'image', category: 'app', src: '', caption: 'Sinhala Letter Learning', placeholder: true },
   { id: 11, type: 'image', category: 'app', src: '', caption: 'Number Counting Module', placeholder: true },
@@ -33,26 +27,15 @@ function PlaceholderCard({ item }) {
   const isVideo = item.type === 'video';
 
   return (
-    <div className="group bg-white rounded-2xl border border-border shadow-card card-hover overflow-hidden h-full flex flex-col">
-      {/* Media area */}
+    <div className="group bg-surface-card rounded-2xl border border-border shadow-card card-hover overflow-hidden h-full flex flex-col">
       <div className="relative aspect-video bg-surface-alt flex items-center justify-center overflow-hidden">
         {item.src && !item.placeholder ? (
           isVideo ? (
-            <video
-              src={item.src}
-              controls
-              className="w-full h-full object-cover"
-              poster=""
-            />
+            <video src={item.src} controls className="w-full h-full object-cover" poster="" />
           ) : (
-            <img
-              src={item.src}
-              alt={item.caption}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
+            <img src={item.src} alt={item.caption} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           )
         ) : (
-          /* Placeholder */
           <div className="flex flex-col items-center gap-3 p-6 text-center">
             <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
               isVideo ? 'bg-accent/10' : item.category === 'app' ? 'bg-primary/10' : 'bg-module-gesture/10'
@@ -84,7 +67,6 @@ function PlaceholderCard({ item }) {
           </div>
         )}
 
-        {/* Category badge */}
         <div className="absolute top-3 left-3">
           <span className={`px-2.5 py-1 rounded-lg text-xs font-bold text-white shadow-sm ${
             isVideo
@@ -98,7 +80,6 @@ function PlaceholderCard({ item }) {
         </div>
       </div>
 
-      {/* Caption */}
       <div className="p-4">
         <p className="text-text-primary text-sm font-semibold group-hover:text-primary transition-colors">
           {item.caption}
@@ -124,7 +105,6 @@ export default function Gallery() {
           subtitle="User testing sessions, app demos, and screenshots from our development journey"
         />
 
-        {/* Filter tabs */}
         <RevealOnScroll className="mb-8">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
@@ -134,7 +114,7 @@ export default function Gallery() {
                 className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   activeFilter === cat.key
                     ? 'gradient-bg-warm text-white shadow-lg shadow-accent/20'
-                    : 'bg-white text-text-secondary border border-border hover:border-primary hover:text-primary hover:bg-primary-50'
+                    : 'bg-surface-card text-text-secondary border border-border hover:border-primary hover:text-primary hover:bg-primary-50 dark:hover:bg-primary-50/10'
                 }`}
               >
                 {cat.label}
@@ -152,7 +132,6 @@ export default function Gallery() {
           </div>
         </RevealOnScroll>
 
-        {/* Gallery Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, i) => (
             <RevealOnScroll key={item.id} delay={`${i * 80}ms`}>

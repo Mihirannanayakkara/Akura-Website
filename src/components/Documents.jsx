@@ -2,13 +2,15 @@ import SectionHeading from './SectionHeading';
 import { RevealOnScroll } from './useScrollReveal';
 
 const documents = [
-  { title: 'Project Proposal', type: 'DOC', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgBU4K5qccxCTb09tHR1ULSyAQ9MGBpmnJigZaXrXu1rjCM?e=ppWGfZ' },
-  { title: 'Checklist 1', type: 'DOC', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgB1Pfb3uFsMTq3R1cafUqHgAWql9LVlDFR-Vqpj_pY9pPo?e=gJnntr' },
-  { title: 'Progress Presentation - 1', type: 'PPT', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgBBoo00JRuTTIr2QCMC7KM8ATGiiV_p2LqC5g5kAHjC9pM?e=jO3Kat' },
-  { title: 'Research Paper', type: 'PDF', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgBwVJVRjS_eQ5xdAfoSx7tZAaIZC-kjRJJEHamqbfE_VZA?e=HWL0Dg' },
-  { title: 'Progress Presentation - 2', type: 'PPT', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgBtWw5vIoO-QIsaIIYgy5sMAeXuswO_4NAkNvoNYcnJxCM?e=Kdl1tf' },
-  { title: 'Final Report & Presentation', type: 'PDF', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgA1p4OI0o2XSKuPTes3LsC9Abh0NpQJ2aqj5qXuG571y9M?e=jnoJPT' },
-  { title: 'Checklist 2', type: 'DOC', link: 'https://mysliit-my.sharepoint.com/:f:/g/personal/it22197528_my_sliit_lk/IgCm9mS2rhavR7yQtQNaQkfEAWRqnV9wgcaMavnSn_CFtEY?e=Rxm4s1' },
+  { title: 'Topic Assessment Form', type: 'DOC', link: 'https://drive.google.com/file/d/1ZAmaL3AJxVKTt7Fz8axW8OZcg44lsT9C/view?usp=drive_link' },
+  { title: 'Project Proposal', type: 'DOC', link: 'https://drive.google.com/drive/folders/1Ji03BtMdT8ssVVZon5FxlYGIB0S4BzFb?usp=drive_link' },
+  { title: 'Proposal Presentation', type: 'PPT', link: 'https://drive.google.com/file/d/1R56X4h7QhaKv04y70Y-QA0y-N6DVYcxE/view?usp=drive_link' },
+  { title: 'Checklist 1', type: 'DOC', link: 'https://drive.google.com/file/d/1ZifW6ltdhmcxtp_kxb7EFuNpM-099NHa/view?usp=drive_link' },
+  { title: 'Progress Presentation - 1', type: 'PPT', link: 'https://docs.google.com/presentation/d/19faIcO0f7Gw_Y5jSWfS1wjNpiMMOWpmG/edit?usp=drive_link&ouid=113352622269529392763&rtpof=true&sd=true' },
+  { title: 'Research Paper', type: 'PDF', link: 'https://drive.google.com/file/d/13iQWPAwCBXx1R3eW5VdT9iF_g2RhFQiq/view?usp=drive_link' },
+  { title: 'Progress Presentation - 2', type: 'PPT', link: 'https://docs.google.com/presentation/d/1v9F9XxOHGzKwZBoQPac1aoGNoR2Bajd6/edit?usp=drive_link&ouid=113352622269529392763&rtpof=true&sd=true' },
+  { title: 'Final Report & Presentation', type: 'PDF', link: 'https://drive.google.com/drive/folders/1rPpWPS8qu-3wbIQdVOfo-RCgtMXyxwD7?usp=drive_link' },
+  { title: 'Checklist 2', type: 'DOC', link: 'https://docs.google.com/spreadsheets/d/1wOChm_YifM66NN8pWID_3bWGW_mpUNZz/edit?usp=drive_link&ouid=113352622269529392763&rtpof=true&sd=true' },
 ];
 
 const typeConfig = {

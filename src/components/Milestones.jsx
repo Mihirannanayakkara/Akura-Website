@@ -2,7 +2,8 @@ import SectionHeading from './SectionHeading';
 import { RevealOnScroll } from './useScrollReveal';
 
 const milestones = [
-  { date: 'Sep 2025', title: 'Project Proposal', desc: 'A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.', marks: 12, status: 'completed' },
+  { date: 'July 2025', title: 'Topic Assesment Form', desc: 'TAF-Research topic approval, problem framing, domain fit, and feasibility review for the Project', marks: 0, status: 'completed' },
+  { date: 'Sep 2025', title: 'Project Proposal & Presentation', desc: 'A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.', marks: 12, status: 'completed' },
   { date: 'Jan 2026', title: 'Progress Presentation I', desc: 'Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.', marks: 15, status: 'completed' },
   { date: 'Jan 2026', title: 'Checklist 1', desc: 'Checklist 1 Github Repository', marks: 1, status: 'completed' },
   { date: 'March 2026', title: 'Progress Presentation II', desc: 'Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.', marks: 18, status: 'completed' },
